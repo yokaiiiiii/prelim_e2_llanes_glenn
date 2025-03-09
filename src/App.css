@@ -1,3 +1,4 @@
+/* General Styles */
 .App {
   text-align: center;
 }
@@ -14,14 +15,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #001f3f; /* Navy blue */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #f4f4f4; /* Cream text */
 }
 
 .App-link {
@@ -39,75 +40,564 @@
 
 /* Dark mode styles */
 body.dark-mode {
-  background-color: #333;
-  color: #fff;
+  background-color: #001f3f; /* Navy blue */
+  color: #f4f4f4; /* Cream text */
 }
 
 body.dark-mode .navbar {
-  background-color: #222;
-  border-bottom: 1px solid #444;
+  background-color: #001f3f; /* Navy blue */
+  border-bottom: 1px solid #003366; /* Darker navy blue */
 }
 
 body.dark-mode .form-control {
-  background-color: #444;
-  color: #fff;
-  border-color: #555;
+  background-color: #00284d; /* Dark navy blue */
+  color: #f4f4f4; /* Cream text */
+  border-color: #003366; /* Darker navy blue */
 }
 
 body.dark-mode .form-control:focus {
-  background-color: #555;
-  color: #fff;
-  border-color: #666;
+  background-color: #003366; /* Darker navy blue */
+  color: #f4f4f4; /* Cream text */
+  border-color: #004080; /* Even darker navy blue */
 }
 
 /* Style for the name input field */
 .form-control {
   max-width: 300px;
   margin: 10px 0;
+  background-color: #ffffff; /* White background */
+  color: #333; /* Dark gray text */
+  border: 1px solid #001f3f; /* Navy blue border */
 }
 
 /* Dark mode styles for the input field */
 body.dark-mode .form-control {
-  background-color: #444;
-  color: #fff;
-  border-color: #555;
+  background-color: #00284d; /* Dark navy blue */
+  color: #f4f4f4; /* Cream text */
+  border-color: #003366; /* Darker navy blue */
 }
 
 body.dark-mode .form-control:focus {
-  background-color: #555;
-  color: #fff;
-  border-color: #666;
+  background-color: #003366; /* Darker navy blue */
+  color: #f4f4f4; /* Cream text */
+  border-color: #004080; /* Even darker navy blue */
 }
 
 /* Custom styles for buttons */
 .btn-custom {
-  background-color: #007bff;
-  color: white;
+  background-color: #001f3f; /* Navy blue */
+  color: #f4f4f4; /* Cream text */
   border-radius: 5px;
   padding: 10px 20px;
   border: none;
 }
 
 .btn-custom:hover {
-  background-color: #0056b3;
+  background-color: #003366; /* Darker navy blue */
 }
 
 /* Custom styles for input fields */
 .input-custom {
-  border: 1px solid #ccc;
+  border: 1px solid #001f3f; /* Navy blue border */
   border-radius: 5px;
   padding: 10px;
   width: 100%;
+  background-color: #ffffff; /* White background */
+  color: #333; /* Dark gray text */
 }
 
 /* Dark mode styles for buttons and inputs */
 body.dark-mode .btn-custom {
-  background-color: #333;
-  color: #fff;
+  background-color: #003366; /* Darker navy blue */
+  color: #f4f4f4; /* Cream text */
 }
 
 body.dark-mode .input-custom {
-  background-color: #444;
-  color: #fff;
-  border-color: #555;
+  background-color: #00284d; /* Dark navy blue */
+  color: #f4f4f4; /* Cream text */
+  border-color: #003366; /* Darker navy blue */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #001f3f; /* Navy blue */
+  color: #f4f4f4; /* Cream text */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #f4f4f4; /* Cream text */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffd700; /* Gold hover effect */
+}
+
+/* Card Styles (for Dashboard) */
+.card {
+  background-color: #ffffff; /* White background */
+  border: 1px solid #001f3f; /* Navy blue border */
+  color: #333; /* Dark gray text */
+}
+
+.card-title {
+  color: #001f3f; /* Navy blue */
+}
+
+/* Dark Mode Overrides for Cards */
+body.dark-mode .card {
+  background-color: #00284d; /* Dark navy blue */
+  border-color: #003366; /* Darker navy blue */
+  color: #f4f4f4; /* Cream text */
+}
+
+body.dark-mode .card-title {
+  color: #f4f4f4; /* Cream text */
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Card Styling */
+body.dark-mode .card {
+  background-color: #00284d; /* Dark navy blue */
+  color: #f4f4f4; /* Cream text */
+}
+
+/* Form Switch Styling */
+.form-switch .form-check-input {
+  width: 3rem;
+  height: 1.5rem;
+  margin-right: 10px;
+}
+
+.form-switch .form-check-input:checked {
+  background-color: #001f3f; /* Navy blue */
+  border-color: #001f3f; /* Navy blue */
+}
+
+/* Checkbox Styling */
+.form-check-input {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 10px;
+}
+
+.form-check-input:checked {
+  background-color: #001f3f; /* Navy blue */
+  border-color: #001f3f; /* Navy blue */
+}
+
+/* Modern Button Styling */
+.btn-primary {
+  background-color: #001f3f; /* Navy blue */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #003366; /* Darker navy blue */
+}
+
+/* Dark Mode Button Styling */
+body.dark-mode .btn-primary {
+  background-color: #003366; /* Darker navy blue */
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #004080; /* Even darker navy blue */
+}
+
+/* Modern Card Styling for Home Page */
+.card {
+  border: none;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Dark Mode Card Styling */
+body.dark-mode .card {
+  background-color: #00284d; /* Dark navy blue */
+  color: #f4f4f4; /* Cream text */
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #001f3f; /* Navy blue */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #003366; /* Darker navy blue */
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Gray */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268; /* Darker gray */
+}
+
+/* Dark Mode Button Styling */
+body.dark-mode .btn-primary {
+  background-color: #003366; /* Darker navy blue */
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #004080; /* Even darker navy blue */
+}
+
+body.dark-mode .btn-secondary {
+  background-color: #5a6268; /* Darker gray */
+}
+
+body.dark-mode .btn-secondary:hover {
+  background-color: #4a5258; /* Even darker gray */
+}
+
+/* Modern Card Styling for Profile Page */
+.card {
+  border: none;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Dark Mode Card Styling */
+body.dark-mode .card {
+  background-color: #00284d; /* Dark navy blue */
+  color: #f4f4f4; /* Cream text */
+}
+
+/* Profile Picture Styling */
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #001f3f; /* Navy blue */
+  border: 4px solid #001f3f; /* Navy blue border */
+  margin: 0 auto;
+}
+
+/* Input Field Styling */
+.form-control {
+  border: 1px solid #001f3f; /* Navy blue border */
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  background-color: #ffffff; /* White background */
+  color: #333; /* Dark gray text */
+}
+
+/* Dark Mode Input Field Styling */
+body.dark-mode .form-control {
+  background-color: #00284d; /* Dark navy blue */
+  color: #f4f4f4; /* Cream text */
+  border-color: #003366; /* Darker navy blue */
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #001f3f; /* Navy blue */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #003366; /* Darker navy blue */
+}
+
+/* Dark Mode Button Styling */
+body.dark-mode .btn-primary {
+  background-color: #003366; /* Darker navy blue */
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #004080; /* Even darker navy blue */
+}
+
+/* Modern Card Styling for Contact Page */
+.card {
+  border: none;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Dark Mode Card Styling */
+body.dark-mode .card {
+  background-color: #00284d; /* Dark navy blue */
+  color: #f4f4f4; /* Cream text */
+}
+
+/* Input Field Styling */
+.form-control {
+  border: 1px solid #001f3f; /* Navy blue border */
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  background-color: #ffffff; /* White background */
+  color: #333; /* Dark gray text */
+}
+
+/* Dark Mode Input Field Styling */
+body.dark-mode .form-control {
+  background-color: #00284d; /* Dark navy blue */
+  color: #f4f4f4; /* Cream text */
+  border-color: #003366; /* Darker navy blue */
+}
+
+/* Textarea Styling */
+textarea.form-control {
+  resize: none; /* Disable resizing */
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #001f3f; /* Navy blue */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #003366; /* Darker navy blue */
+}
+
+/* Dark Mode Button Styling */
+body.dark-mode .btn-primary {
+  background-color: #003366; /* Darker navy blue */
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #004080; /* Even darker navy blue */
+}
+
+/* Modern Card Styling for Dashboard Page */
+.card {
+  border: none;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Dark Mode Card Styling */
+body.dark-mode .card {
+  background-color: #00284d; /* Dark navy blue */
+  color: #f4f4f4; /* Cream text */
+}
+
+/* Progress Bar Styling */
+.progress {
+  height: 20px;
+  border-radius: 10px;
+  background-color: #e9ecef; /* Light gray */
+}
+
+.progress-bar {
+  background-color: #001f3f; /* Navy blue */
+  border-radius: 10px;
+}
+
+/* Dark Mode Progress Bar Styling */
+body.dark-mode .progress {
+  background-color: #003366; /* Darker navy blue */
+}
+
+body.dark-mode .progress-bar {
+  background-color: #004080; /* Even darker navy blue */
+}
+
+/* List Group Styling */
+.list-group-item {
+  border: none;
+  background-color: transparent;
+}
+
+/* Dark Mode List Group Styling */
+body.dark-mode .list-group-item {
+  color: #f4f4f4; /* Cream text */
+}
+
+/* Display Text Styling */
+.display-4 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #001f3f; /* Navy blue */
+}
+
+/* Dark Mode Display Text Styling */
+body.dark-mode .display-4 {
+  color: #f4f4f4; /* Cream text */
+}
+
+/* Modern Card Styling for Register Page */
+.card {
+  border: none;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Dark Mode Card Styling */
+body.dark-mode .card {
+  background-color: #00284d; /* Dark navy blue */
+  color: #f4f4f4; /* Cream text */
+}
+
+/* Input Field Styling */
+.form-control {
+  border: 1px solid #001f3f; /* Navy blue border */
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  background-color: #ffffff; /* White background */
+  color: #333; /* Dark gray text */
+}
+
+/* Dark Mode Input Field Styling */
+body.dark-mode .form-control {
+  background-color: #00284d; /* Dark navy blue */
+  color: #f4f4f4; /* Cream text */
+  border-color: #003366; /* Darker navy blue */
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #001f3f; /* Navy blue */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #003366; /* Darker navy blue */
+}
+
+/* Dark Mode Button Styling */
+body.dark-mode .btn-primary {
+  background-color: #003366; /* Darker navy blue */
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #004080; /* Even darker navy blue */
+}
+
+/* Alert Styling */
+.alert-danger {
+  background-color: #ff6b6b; /* Light red */
+  color: #ffffff; /* White text */
+  border-color: #ff4c4c; /* Darker red */
+}
+
+/* Modern Card Styling for Login Page */
+.card {
+  border: none;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Dark Mode Card Styling */
+body.dark-mode .card {
+  background-color: #00284d; /* Dark navy blue */
+  color: #f4f4f4; /* Cream text */
+}
+
+/* Input Field Styling */
+.form-control {
+  border: 1px solid #001f3f; /* Navy blue border */
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  background-color: #ffffff; /* White background */
+  color: #333; /* Dark gray text */
+}
+
+/* Dark Mode Input Field Styling */
+body.dark-mode .form-control {
+  background-color: #00284d; /* Dark navy blue */
+  color: #f4f4f4; /* Cream text */
+  border-color: #003366; /* Darker navy blue */
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #001f3f; /* Navy blue */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #003366; /* Darker navy blue */
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Red */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Darker red */
+}
+
+/* Dark Mode Button Styling */
+body.dark-mode .btn-primary {
+  background-color: #003366; /* Darker navy blue */
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #004080; /* Even darker navy blue */
+}
+
+body.dark-mode .btn-danger {
+  background-color: #c82333; /* Darker red */
+}
+
+body.dark-mode .btn-danger:hover {
+  background-color: #a71d2a; /* Even darker red */
+}
+
+/* Alert Styling */
+.alert-danger {
+  background-color: #ff6b6b; /* Light red */
+  color: #ffffff; /* White text */
+  border-color: #ff4c4c; /* Darker red */
 }

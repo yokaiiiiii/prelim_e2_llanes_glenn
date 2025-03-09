@@ -6,7 +6,9 @@ import Settings from './components/Settings';
 import Contact from './components/Contact';
 import Dashboard from './components/Dashboard';
 import Login from './components/Login';
-import ProtectedRoute from './components/ProtectedRoute'; // Import the ProtectedRoute component
+import Register from './components/Register';
+import ForgotPassword from './components/ForgotPassword'; // Import the ForgotPassword component
+import ProtectedRoute from './components/ProtectedRoute';
 import Navbar from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -51,6 +53,8 @@ function App() {
             }
           />
           <Route path="/login" element={<Login setLoggedIn={setLoggedIn} />} />
+          <Route path="/register" element={<Register setLoggedIn={setLoggedIn} />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} /> {/* Add the ForgotPassword route */}
         </Routes>
       </div>
     </Router>

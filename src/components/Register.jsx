@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-function Login({ setLoggedIn }) {
+function Register({ setLoggedIn }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError('');
     // Simulate an API call with a delay
     setTimeout(() => {
-      if (username === 'user' && password === 'password') {
-        setLoggedIn(true);
-        navigate('/profile');
+      if (username && password && email) {
+        alert('Registration successful! Please log in.');
+        navigate('/login');
       } else {
-        setError('Invalid username or password');
+        setError('Please fill in all fields.');
       }
       setLoading(false);
     }, 1000);
@@ -27,9 +28,9 @@ function Login({ setLoggedIn }) {
   return (
     <div className="container mt-5">
       <div className="card shadow-lg p-4" style={{ maxWidth: '800px', margin: '0 auto' }}>
-        <h1 className="text-center mb-4">Login</h1>
+        <h1 className="text-center mb-4">Register</h1>
         {error && <div className="alert alert-danger">{error}</div>}
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleRegister}>
           <div className="mb-3">
             <label htmlFor="username" className="form-label">
               Username:
@@ -40,6 +41,19 @@ function Login({ setLoggedIn }) {
               className="form-control"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">
+              Email:
+            </label>
+            <input
+              type="email"
+              id="email"
+              className="form-control"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -68,20 +82,17 @@ function Login({ setLoggedIn }) {
                   <span className="visually-hidden">Loading...</span>
                 </>
               ) : (
-                'Login'
+                'Register'
               )}
             </button>
           </div>
         </form>
         <p className="text-center mt-4">
-          Don't have an account? <Link to="/register">Register here</Link>.
-        </p>
-        <p className="text-center mt-2">
-          Forgot your password? <Link to="/forgot-password">Reset it here</Link>.
+          Already have an account? <Link to="/login">Log in here</Link>.
         </p>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Register;
