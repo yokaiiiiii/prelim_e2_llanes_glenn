@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-function Navbar({ darkMode }) {
+function Navbar({ darkMode, loggedIn, setLoggedIn }) {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Perform logout logic (e.g., clear user session)
-    alert('Logged out successfully!');
+    setLoggedIn(false);
     navigate('/');
   };
 
@@ -29,12 +28,18 @@ function Navbar({ darkMode }) {
           <Link className="nav-link" to="/contact">
             Contact
           </Link>
-          <button className="btn btn-danger ms-2" onClick={handleLogout}>
-            Logout
-          </button>
           <Link className="nav-link" to="/dashboard">
             Dashboard
           </Link>
+          {loggedIn ? (
+            <button className="btn btn-danger ms-2" onClick={handleLogout}>
+              Logout
+            </button>
+          ) : (
+            <Link className="btn btn-primary ms-2" to="/login">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </nav>
