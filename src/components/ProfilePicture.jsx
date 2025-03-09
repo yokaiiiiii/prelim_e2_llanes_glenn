@@ -1,13 +1,16 @@
 import React from 'react';
 
-function ProfilePicture() {
+function ProfilePicture({ profilePic }) {
   return (
     <div
       style={{
         width: '100px',
         height: '100px',
         borderRadius: '50%',
-        backgroundColor: 'gray',
+        backgroundColor: profilePic ? 'transparent' : 'gray',
+        backgroundImage: profilePic ? `url(${profilePic})` : 'none',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       }}
     ></div>
   );
